@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:colorBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:minHeight="80dp"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:stateListAnimator="@animator/raise"
+    >
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_content_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="72dp"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_content_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/userProfileImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top"
+        />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_content_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_content_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top"
+        tools:text="Walter White"
+        />
+
+    <ImageView
+        android:id="@+id/postImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="200dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_content_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_content_left"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
+        tools:text="This is a New Post Headline"
+        />
+</android.support.constraint.ConstraintLayout>
